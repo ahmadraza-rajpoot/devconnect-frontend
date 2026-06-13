@@ -12,6 +12,7 @@ import FeedPage from './pages/FeedPage'
 import EditProfilePage from './pages/EditProfilePage'
 import ConnectionsPage from './pages/ConnectionsPage'
 import RequestPage from './pages/RequestPage'
+import Chat from './components/Chat'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
                   <Route path='/edit/profile' element={<EditProfilePage />}/>
                   <Route path='/connections' element={<ConnectionsPage />}/>
                   <Route path='/connections/request' element = {<RequestPage />} />
+                  <Route path='/chat/:targetUserId' element = {<Chat />} />
               </Route>
           </Routes>
       </BrowserRouter>

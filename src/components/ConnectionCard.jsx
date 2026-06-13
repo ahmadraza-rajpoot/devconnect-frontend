@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ConnectionCard = ({ connection }) => {
-  const { firstName, lastName, photoUrl, age, gender, about } = connection
+  const { _id, firstName, lastName, photoUrl, age, gender, about } = connection
 
   return (
     <div className='group flex max-w-150 items-center gap-4 p-4 px-10 rounded-2xl
@@ -42,6 +43,7 @@ const ConnectionCard = ({ connection }) => {
           Connected
         </span>
       </div>
+      <Link to={"/chat/"+_id}>Chat</Link>
     </div>
   )
 }
